@@ -1,0 +1,14 @@
+language: python
+
+python:
+    - "3.11"
+
+env:
+    - SECRET_KETY = 'travis_ci'
+services:
+    - sqlite
+install:
+    - pip -r requirements.txt
+
+scripts:
+    - python manage.py test
